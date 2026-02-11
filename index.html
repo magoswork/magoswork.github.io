@@ -6,7 +6,8 @@
     <style>
         body {
             margin: 0;
-            padding: 40px;
+            padding-left: 40px;
+            padding-top: 40px;
             font-family: sans-serif;
             background: #111;
             color: #eee;
@@ -20,15 +21,46 @@
             background: #1a1a1a;
             border: 1px solid #333;
             border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s ease, max-height 0.4s ease;
+            max-height: 260px;
+            overflow: hidden;
+        }
+
+        .intro-box:hover {
+            transform: scale(1.03);
+        }
+
+        .intro-box.expanded {
+            max-height: 1000px;
+        }
+
+        .expand-hint {
+            margin-top: 16px;
+            font-size: 0.85em;
+            font-style: italic;
+            color: #aaa;
         }
     </style>
 </head>
 <body>
-    <div class="intro-box">
-        <h1>Hello.</h1>
-        <p>
-            I am Mago/Ronin, and this is my workspace. It's a bit of a mess, but it's a collection of everything that comes out of my brain. I intend to describe here everything I've ever intended to make. If I don't ever finish it (which, in human lifetimes, I probably won't), it <i>should</i> exist as a testament to my thoughts.
-        </p>
-    </div>
+
+<div class="intro-box" onclick="this.classList.toggle('expanded')">
+    <h1>Hello.</h1>
+    <p>
+        I am Mago/Ronin, and this is my workspace. It's a bit of a mess, but it's a collection of everything that comes out of my brain.
+    </p>
+
+    <p>
+        I intend to describe here everything I've ever intended to make. If I don't ever finish it (which, in human lifetimes, I probably won't), it should exist as a testament to my thoughts.
+    </p>
+
+    <p>
+        This space is for longer explanations: influences, obsessions, abandoned ideas, and fragments that never found a home elsewhere. It will grow as long as I do.
+    </p>
+
+    <div class="expand-hint">click to expand</div>
+</div>
+
 </body>
 </html>
