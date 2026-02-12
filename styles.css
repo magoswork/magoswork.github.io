@@ -1,17 +1,33 @@
-body {
+/* Base reset */
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 40px;
-    font-family: sans-serif;
-    background: #111;
-    color: #eee;
+    padding: 0;
 }
 
-.intro-box {
-    width: 25vw;
-    min-width: 280px;
-    padding: 32px;
-    box-sizing: border-box;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 12px;
+/* Body */
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #111;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+/* Heading */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
